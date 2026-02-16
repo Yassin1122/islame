@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:islame/home/home-screen.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
+import 'myThemeData.dart';
+
 
   void main() {
     WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -16,11 +18,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+
       initialRoute:HomeScreen.routeName,
       routes:{
 
         HomeScreen.routeName:(context)=>HomeScreen()
       },
+      theme:MyThemeData.myTheme,
+      themeMode:ThemeMode.dark,
     );
 
   }
